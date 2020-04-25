@@ -21,16 +21,4 @@ Route::get('/', function() {
     ]);
 });
 
-Route::get('posts/{post}', function($post) {
-    $posts = [
-        'post-ya-kwanza' => 'Post ya kwanza',
-        'post-ya-pili' => 'Post ya pili' 
-    ];
-
-    if(! array_key_exists($post, $posts))
-        abort(404, "Samahani, post haipatikani.");
-
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
+Route::get('posts/{post}', 'PostsController@show');

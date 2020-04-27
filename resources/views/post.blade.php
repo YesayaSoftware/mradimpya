@@ -7,7 +7,7 @@
 	</head>
 	
 	<body>
-	    <h2>{{ $post }}</h2>
+	    <h2>{{ $post->body }}</h2>
 
         <p>Maelezo kuhusu post yangu</p>
 	</body>
